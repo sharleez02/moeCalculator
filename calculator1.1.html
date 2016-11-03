@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///Users/student_21/Desktop/moeCalculator/calculator1.1.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+	<title></title>
+	<style type="text/css">
+		form{
+			background-image: url(digital.jpeg);
+			text-align: center;
+			padding: 100px;
+		}
+
+
+		table{
+            background-image: url(digital1.jpeg);
+			box-shadow: inset 5px 1;
+			padding:10em;
+			border: 10px;
+			
+             }
+        
+        
+       .button,.numbers{
+                display: inline-block;
+                overflow:auto;
+				text-align: center;
+				font-size: 1.0em;
+				font-weight: bold;
+				line-height: 100%;
+				width: 5em;
+				height: 5em;
+				margin-bottom: 0.5em;
+				padding-top: .6em;
+				padding-bottom: .6em;
+				color: #fff;
+				background-color: #aaabbb;
+				border-radius: 10px;
+				border: solid #cccccc 2px;
+				box-shadow: 2px 2px 1px #888888;
+				clear:right;
+				float:center;
+              }
+
+       .text{font-size: 24px;}
+
+	</style>
+</head>
+<body>
+<script type="text/javascript">
+
+	var a,b,results;
+	function sum(){
+		setValues();
+		results = a + b;
+		alert("The sum is equaled to" +results);
+	}
+
+	function setValues(){
+		a = Number(document.getElementById("a").value);
+		b = Number(document.getElementById("b").value);
+	}
+
+	function multiply(){
+		setValues();
+		{
+        results = a * b;
+        alert("The result is" + results);
+		}
+	}
+
+	function divition(){
+		setValues();
+		{
+        results = a / b;
+        alert("The result is" + results);
+		}
+	}
+	function subtract(){
+		setValues();
+		{
+        results = a - b;
+        alert("The result is" + results);
+		}
+	}
+	function decimol(){
+		setValues();
+		{
+        results = a . b;
+        alert("The result is" + results);
+		}
+	}
+
+
+
+	
+</script>
+
+<form name="Calc">
+<center><table border="4">
+<tbody><tr>
+<td colspan="5">
+<input class="text" name="Input" size="29">
+</td></tr><tr>
+<td>
+<input class="button" name="seven" value="  7 " onclick="Calc.Input.value += &#39;7&#39;"> 
+<input class="button" name="eight" value="  8  " onclick="Calc.Input.value += &#39;8&#39;">
+<input class="button" name="nine" value="  9  " onclick="Calc.Input.value += &#39;9&#39;">
+<input class="button" name="multiply" value="  *  " onclick="Calc.Input.value += &#39;*&#39;">
+<br>
+<input class="button" name="four" value="  4  " onclick="Calc.Input.value += &#39;4&#39;">
+<input class="button" name="five" value="  5  " onclick="Calc.Input.value += &#39;5&#39;">
+<input class="button" name="six" value="  6  " onclick="Calc.Input.value += &#39;6&#39;">
+<input class="button" name="subtract" value="  -  " onclick="Calc.Input.value += &#39; -&#39;">
+<br>
+<input class="button" name="one" value="  1  " onclick="Calc.Input.value += &#39;1&#39;">
+<input class="button" name="two" value="  2  " onclick="Calc.Input.value += &#39;2&#39;">
+<input class="button" name="three" value="  3  " onclick="Calc.Input.value += &#39;3&#39;">
+<input class="button" name="plus" value="  +  " onclick="Calc.Input.value += &#39; + &#39;">
+<br>
+<input class="button" name="two" value="  0  " onclick="Calc.Input.value += &#39;0&#39;">
+<input class="button" name="divition" value="  ÷  " onclick="Calc.Input.value += &#39;/&#39;">
+<input class="button" name="DoIt" value="  =  " onclick="Calc.Input.value = eval(Calc.Input.value)">
+
+<input class="numbers" type="button" name="clear" value=" c " onclick="Calc.Input.value = &#39;&#39;">
+
+</td>
+</tr>
+</tbody></table></center>
+</form>
+
+
+
+</body></html>
